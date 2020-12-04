@@ -1,0 +1,71 @@
+:root {
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background: var(--very-light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+.big-letters {
+    font-size: 1.56em;
+}
+
+.casi-big-letters {
+    font-size: 1.26em;
+    letter-spacing: 0.04rem;
+}
+
+.card-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.015rem;
+    line-height: 1.5rem;
+    color: var(--grayish-blue);
+}
+
+.very-dark-blue {
+    color: var(--very-dark-blue);
+}
+
+.grayish-blue {
+    color: var(--grayish-blue);
+}
+
+.icon {
+    padding-top: 2rem;
+    padding-left: 14.5rem;
+   }
+
+.cyan {
+    background-color: var(--cyan);
+}
+
+.red {
+    background-color: var(--red);
+
+}
+
+.orange {
+    background-color: var(--orange);
+
+}
+
+.blue {
+    background-color: var(--blue);
+}
