@@ -192,7 +192,7 @@ li {
 }
 .checkmark {
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     height: 20px;
     width: 20px;
@@ -201,14 +201,14 @@ li {
     cursor: pointer;
 }
 .checkbox-container input ~ .checkmark:hover {
-    background-image: url(/images/icon-check.svg), linear-gradient(var(--color-gradient-from), var(--color-gradient-to));
-    background-repeat: no-repeat, no-repeat;
+    background-image: url(/images/icon-check.svg), linear-gradient(to right,var(--color-gradient-from), var(--color-gradient-to));
+    background-repeat: no-repeat, repeat;
     background-position: center, center;
     background-size: auto, cover;
 }
 .checkbox-container input:checked ~ .checkmark {
-    background-image: url(/images/icon-check.svg), linear-gradient(var(--color-gradient-from), var(--color-gradient-to));
-    background-repeat: no-repeat, no-repeat;
+    background-image: url(/images/icon-check.svg), linear-gradient(to right, var(--color-gradient-from), var(--color-gradient-to));
+    background-repeat: no-repeat, repeat;
     background-position: center, center;
     background-size: auto, cover;
 }
@@ -261,7 +261,7 @@ li {
     color: var(--light-theme_dark-grayish-blue);
 }
 .color-light-theme-three {
-    color: var(--light-theme_light-grayish-blue:);
+    color: var(--light-theme_light-grayish-blue);
 }
 .color-light-theme-four {
     color: var(--dark-theme_light-grayish-blue-hoover);
@@ -360,5 +360,7 @@ li {
 @media (min-width: 1200px) {
     .header-flexbox {
         padding: 3rem 4rem;
+        width: 40%;
+        margin: 0 auto;
     }
 }

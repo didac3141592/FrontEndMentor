@@ -137,22 +137,18 @@ function emptyTask() {
 function addTask(task) {
     let list = document.querySelector('ul');
     let newItem = document.createElement('li');
+    let borderButton;
     newItem.classList.add('active-task');
     if(document.body.id === 'dark') {
         newItem.classList.add('color-dark-theme-one');
         newItem.classList.add('border-bottom-dark-theme');
+        borderButton = 'border-button-dark-theme';
     }
     else {
         newItem.classList.add('color-light-theme-one');
         newItem.classList.add('border-bottom-light-theme');
+        borderButton = 'border-button-light-theme';
     }
-    let borderButton;
-    if(document.body.id === 'dark') {
-        borderButton = 'border-button-dark-theme'
-    }
-    else borderButton = 'border-button-light-theme'
-
-    newItem.setAttribute('draggable', 'true');
     newItem.innerHTML = '<label class="checkbox-container"><span class="pointer">'+ task +'</span><input class="checkbox" type="checkbox"><span class="checkmark ' + borderButton +'"></span><button class="d-none f-right delete-task"><img src="images/icon-cross.svg" alt=""></button></label>';
     list.appendChild(newItem);
     let input = document.querySelector('input');
@@ -162,11 +158,53 @@ function addTask(task) {
     addCompleteTaskEvent();
     showCross();
     hideCross();
-    setPointer();   
+    setPointer();
+    updateUserData();
+}   
+function addCompletedTask(task) {
+    let list = document.querySelector('ul');
+    let newItem = document.createElement('li');
+    let borderButton;
+    newItem.classList.add('completed-task');
+    if(document.body.id === 'dark') {
+        newItem.classList.add('color-dark-theme-one');
+        newItem.classList.add('border-bottom-dark-theme');
+        borderButton = 'border-button-dark-theme';
+    }
+    else {
+        newItem.classList.add('color-light-theme-one');
+        newItem.classList.add('border-bottom-light-theme');
+        borderButton = 'border-button-light-theme';
+    }
+    newItem.innerHTML = '<label class="checkbox-container"><span class="pointer">'+ task +'</span><input class="checkbox" type="checkbox" checked><span class="checkmark ' + borderButton +'"></span><button class="d-none f-right delete-task"><img src="images/icon-cross.svg" alt=""></button></label>';
+    list.appendChild(newItem);
+    let input = document.querySelector('input');
+    input.value = "" 
+    itemsToDoYet();
+    addDeleteTaskEvent();
+    addCompleteTaskEvent();
+    showCross();
+    hideCross();
+    setPointer();
+    updateUserData();
 }   
 function deleteTask(task) {
     task.parentNode.remove();
+    updateUserData();
 }
+function updateUserData() {
+    let itemsArray = [];
+    let completedArray = [];
+    let list = document.querySelectorAll('li');
+    list.forEach(element => {
+        itemsArray.push(element.outerText);
+        completedArray.push(element.classList.contains('completed-task'));
+    }); 
+    localStorage.setItem('data', JSON.stringify(itemsArray));
+    localStorage.setItem('completed', JSON.stringify(completedArray));
+}   
+
+
 function checkItem() {
     let itemToCheck = document.querySelectorAll('.checkbox');
     itemToCheck.forEach(element => {
@@ -352,3 +390,4 @@ function hideCross(){
         })   
     });
 }
+

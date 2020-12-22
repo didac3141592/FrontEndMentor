@@ -1,3 +1,4 @@
+
 changeToDarkTheme();
 changeToLightTheme();
 addNewItem();
@@ -13,4 +14,3 @@ filterAll();
 setPointer();
 showCross();
 hideCross();
-
