@@ -196,12 +196,14 @@ function updateUserData() {
     let itemsArray = [];
     let completedArray = [];
     let list = document.querySelectorAll('li');
+    let theme = document.body.id;
     list.forEach(element => {
         itemsArray.push(element.outerText);
         completedArray.push(element.classList.contains('completed-task'));
     }); 
     localStorage.setItem('data', JSON.stringify(itemsArray));
     localStorage.setItem('completed', JSON.stringify(completedArray));
+    localStorage.setItem('theme', theme);
 }   
 
 
