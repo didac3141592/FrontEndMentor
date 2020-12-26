@@ -201,13 +201,13 @@ li {
     cursor: pointer;
 }
 .checkbox-container input ~ .checkmark:hover {
-    background-image: url(/images/icon-check.svg), linear-gradient(to right,var(--color-gradient-from), var(--color-gradient-to));
+    background-image: url(/todo-app/images/icon-check.svg), linear-gradient(to right,var(--color-gradient-from), var(--color-gradient-to));
     background-repeat: no-repeat, repeat;
     background-position: center, center;
     background-size: auto, cover;
 }
 .checkbox-container input:checked ~ .checkmark {
-    background-image: url(/images/icon-check.svg), linear-gradient(to right, var(--color-gradient-from), var(--color-gradient-to));
+    background-image: url(/todo-app/images/icon-check.svg), linear-gradient(to right, var(--color-gradient-from), var(--color-gradient-to));
     background-repeat: no-repeat, repeat;
     background-position: center, center;
     background-size: auto, cover;
@@ -219,7 +219,7 @@ li {
     background-color: var(--dark-theme_very-dark-blue)
 }
 .banner-dark-theme {
-    background-image: url(/images/bg-mobile-dark.jpg);
+    background-image: url(/todo-app/images/bg-mobile-dark.jpg);
 }
 .container-dark-theme {
     background-color: var(--dark-theme_very-dark-desaturated-blue);
@@ -249,7 +249,7 @@ li {
     background-color: var(--light-theme_light-grayish-blue);
 }
 .banner-light-theme {
-    background-image: url(/images/bg-mobile-light.jpg);
+    background-image: url(/todo-app/images/bg-mobile-light.jpg);
 }
 .container-light-theme {
     background-color: whitesmoke;
@@ -325,10 +325,10 @@ li {
 
 @media (min-width: 1020px) {
     .banner-dark-theme {
-        background-image: url(/images/bg-desktop-dark.jpg);
+        background-image: url(/todo-app/images/bg-desktop-dark.jpg);
     }
     .banner-light-theme {
-        background-image: url(/images/bg-desktop-light.jpg);
+        background-image: url(/todo-app/images/bg-desktop-light.jpg);
     }
     .banner-image {
         padding-bottom: 2rem;
