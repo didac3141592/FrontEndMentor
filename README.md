@@ -1,3 +1,3 @@
-# Front-end-mentor
+# Challenges from [FrontEndMentor](https://frontendmentor.io) 
 
-In this repository I will upload the challenges from [Front End Mentor](https://frontendmentor.io) that I complete. 
+Completed either on my own or in a group. 
