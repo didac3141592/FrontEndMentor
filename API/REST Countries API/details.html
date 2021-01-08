@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/details.css">
+    <title>REST Countries API</title>
+    </head>
+    <body class="light-bg">
+      <header>
+        <nav class="navbar navbar-light bg-white py-4 shadow-sm w-100">
+          <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 fw-bold">Where in the world?</span>
+            <button id="theme-changer" class="btn btn-outline-none p-0">
+              <i class="fa fa-moon-o" aria-hidden="true"></i>
+              <p class="d-inline fw-normal">Dark Mode</p>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="shadow-sm py-1  mx-4 w-25 my-4 text-center">
+          <button id="back-button" class="btn btn-outline-none p-0">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            <p class="d-inline p-2">Back</p> 
+          </button>
+        </div>
+        <div id="details-container d-lg-flex flex-row justify-content-around">
+          <div class="container mx-auto my-5">
+            <img id="image" src="" alt="" width="100%">
+          </div>
+          <div class="mx-4 fw-bolder">
+            <h3 id="country"></h3>
+          </div>
+          <div class="d-lg-flex flex-row justify-content-start align-items-start">
+            <div class="mx-4 mb-5">
+              <p id="native-name">
+                <span class="fw-bold">Native Name: </span>
+              </p>
+              <p id="population">
+                <span class="fw-bold">Population: </span>
+              </p>
+              <p id="region">
+                <span class="fw-bold">Region: </span>
+              </p>
+              <p id="sub-region">
+                <span class="fw-bold">Sub-region: </span>
+              </p>
+              <p id="capital">
+                <span class="fw-bold">Capital: </span>
+              </p>
+            </div>
+            <div class="mx-4 my-2">
+              <p id="domain">
+                <span class="fw-bold">Top Level Domain: </span>
+              </p>
+              <p id="currencies">
+                <span class="fw-bold">Currencies: </span>
+              </p>
+              <p id="languages">
+                <span class="fw-bold">Languages: </span>
+              </p>
+            </div>
+          </div>
+          <div  class="mx-4 mt-5">
+            <h6 class="fw-bold">Border Countries: </h6>
+          </div>
+          <!-- The content will be shown here -->
+        </div>
+      </main>
+      <footer class="container m-4 mx-auto">
+        <p class="text-center light-text">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        </p>
+        <p class="text-center light-text">
+          Coded by <a href="https://www.github.com/aguzsol">Alba</a>,  <a href="https://www.github.com/maria-canals">Maria</a> & <a href="https://www.github.com/didac3141592">Dídac</a>.
+        </p>
+      </footer>
+    </body>
+    <script src="/js/details.js"></script>
+    
+    </html>
