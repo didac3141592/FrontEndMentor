@@ -12,8 +12,7 @@ fetch(URL)
 
 function storeData(response) {
     data = response;
-    console.log(data)
-    // getCountryInformation();
+    getDetails();
 };
 
 const IMAGE = document.querySelector("#image");
@@ -29,35 +28,41 @@ const LANGUAGES = document.querySelector("#languages");
 const BORDERS = document.querySelector("#borders");
 const CARD = document.querySelector(".card");
 
-//     function storeData(info) {
-//         if(theme == "dark") {
-//             CARD.classList.add("bg-dark", "text-light", "border-secondary")
-//             document.body.classList.add("bg-dark")
-//         }
-//         data = info;
-//         IMAGE.setAttribute("src", data[0]["flag"])
-//         COUNTRY.textContent = data[0]["name"]
-//         POPULATION.textContent += data[0]["population"]
-//         REGION.textContent += data[0]["region"]
-//         CAPITAL.textContent += data[0]["capital"]
-//         if(data[0]["borders"].length == 0) {
-//             BORDERS.textContent = "No bordering countries"
-//         }
-//         else {
-//             BORDERS.textContent = "Border countries are: "
-//             for(let i=0; i<data[0]["borders"].length; i++) {
-//                 BORDERS.textContent += data[0]["borders"][i] + " "
-//             }
-//         }
+function getDetails() {
+    IMAGE.setAttribute("src", data[0]["flag"]);
+    COUNTRY.innerHTML = data[0]["name"];
+    NATIVE_NAME.innerHTML += data[0]["nativeName"];
+    POPULATION.innerHTML += data[0]["population"];
+    REGION.innerHTML += data[0]["region"];
+    SUB_REGION.innerHTML += data[0]["subregion"];
+    CAPITAL.innerHTML += data[0]["capital"];
+    DOMAIN.innerHTML += data[0]["demonym"];
+    for(let i=0; i<data[0]["currencies"].length; i++) {
+        CURRENCIES.innerHTML += data[0]["currencies"][i]["name"];
+    }
+    for(let i=0; i<data[0]["languages"].length; i++) {
+        LANGUAGES.innerHTML += data[0]["languages"][i]["name"] + " ";
+    }
+    if(data[0]["borders"].length == 0) {
+        BORDERS.innerHTML += "No bordering contries"
+    }
+    for(let i=0; i<data[0]["borders"].length; i++) {
+        BORDERS.innerHTML += data[0]["borders"][i] + "  ";
+    }
+};
 
-//         console.log(data)
-//       }
+
+
 
 const BACK_BUTTON = document.querySelector("#back-button");
 
 BACK_BUTTON.addEventListener("click", function() {
     window.location.href = "/index.html";
 }) 
+
+if(theme == "dark") {
+    setDarkTheme();
+}
 
 
 

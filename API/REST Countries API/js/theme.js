@@ -1,4 +1,5 @@
-let theme = "light";
+
+
 
 function changeTheme() {
     if (theme == "dark") {
@@ -14,6 +15,9 @@ function setDarkTheme() {
 
       const THEME_ICON = document.querySelector("#theme-icon");
       THEME_ICON.classList.replace("fa-moon-o", "fa-sun-o");
+
+      const THEME_TEXT = document.querySelector("#theme-text");
+      THEME_TEXT.textContent = "Light Mode";
 
       const COLOR_BG = document.querySelectorAll(".light-bg");
       const COLOR_TEXT = document.querySelectorAll(".light-text");
@@ -44,6 +48,9 @@ function setLightTheme() {
 
       const THEME_ICON = document.querySelector("#theme-icon");
       THEME_ICON.classList.replace("fa-sun-o", "fa-moon-o");
+
+      const THEME_TEXT = document.querySelector("#theme-text");
+      THEME_TEXT.textContent = "Dark Mode";
 
       const COLOR_BG = document.querySelectorAll(".dark-bg");
       const COLOR_TEXT = document.querySelectorAll(".dark-text")

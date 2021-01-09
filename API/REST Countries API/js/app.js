@@ -1,5 +1,6 @@
 
 let data;
+let theme = "light";
 
 const SELECT = document.querySelector("#filter");
 const SEARCH = document.querySelector("#search");
@@ -38,15 +39,18 @@ function cleanContainer() {
   CARDS_CONTAINER.innerHTML = "";
 };
 function showMoreDetails(event) {
-  window.location.href = "/details.html";
+  let country;
+
   if(!event.target.parentNode.id) {
-    const COUNTRY_DETAILS = event.target.parentNode.parentNode.id;
+    country = event.target.parentNode.parentNode.id;
   } else {
-    const COUNTRY_DETAILS = event.target.parentNode.id;
+    country = event.target.parentNode.id;
   }
 
-  localStorage.setItem("country", COUNTRY_DETAILS); 
+  localStorage.setItem("country", country); 
   localStorage.setItem("theme", theme);
+
+  window.location.href = "/details.html";
 };
 
 
