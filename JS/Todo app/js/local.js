@@ -1,4 +1,5 @@
-if(localStorage.length != 0) {
+
+if(localStorage.getItem('data')) {
     let defaultData = document.querySelector('ul');
     defaultData.innerHTML = "";
     let itemsData = JSON.parse(localStorage.getItem('data'));
